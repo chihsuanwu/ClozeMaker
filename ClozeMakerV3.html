@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cloze Maker</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+	<link rel="stylesheet" type="text/css" href="ClozeMakerV3.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<h1>CLOZE MAKER</h1>
+	<div id="input_container">
+		<textarea id="input" placeholder="Paste paragraph here..."></textarea>
+
+		<button id="btn_clear">Clear</button>
+	</div>
+
+	<div id="main_container">
+		<h3>Click the word to blank it.
+			<span style="padding-left: 800px; font-family: Arial">Answer Mode</span>
+			<input type="checkbox" id="btn_answer_mode">
+
+			<span class="check_answer" style="padding-left: 50px; font-family: Arial">Check Answer</span>
+			<input type="checkbox" class="check_answer" id="btn_check_answer">
+		</h3>						
+
+		<div id="main"></div>
+
+		<div id="tool" style="padding: 8px 4px 4px 4px;">
+			<span>Question number start from:</span>
+			<input class="guide_of_set" type="number" id="number_start"  min="1" max="100">
+
+			<span style="padding-left: 48px;">Length of question's underline:</span>
+			<input class="guide_of_set" type="number" id="number_length"  min="3" max="10">
+
+			<span style="padding-left: 48px;">Solution</span>
+			<input class="guide_of_set" style="vertical-align: middle;" type="checkbox" id="show_answer" />
+		</div>
+	</div>
+	
+	<div id="answer_container">
+		<h3>Here is the answer.</h3>
+		<div id="answer"></div>
+
+		<button id="btn_copy">Copy to clipboard</button>
+	</div>
+
+	<script type="text/javascript" src="ClozeMakerV3.js"></script>
+</body>
+</html>
